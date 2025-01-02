@@ -5,7 +5,7 @@ set(BINDINGS_TARGET power_market_bindings)
 file(GLOB SOURCES pybind_wrapper.cpp)
 
 # Add the pybind11 module
-pybind11_add_module(${BINDINGS_TARGET} ${SOURCES})
+nanobind_add_module(${BINDINGS_TARGET} NOMINSIZE ${SOURCES})
 
 # Link to the core library
 target_link_libraries(${BINDINGS_TARGET} PRIVATE power_market_engine)

@@ -9,9 +9,9 @@ add_library(${LIB_NAME} ${SOURCES})
 
 # Include directories
 target_include_directories(${LIB_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-
+target_include_directories(${LIB_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/src)
 # Link libraries
-target_link_libraries(${LIB_NAME} PUBLIC arrow parquet)
+#target_link_libraries(${LIB_NAME} PUBLIC arrow parquet)
 
 # Add subdirectories for modular builds
 add_subdirectory(engine)

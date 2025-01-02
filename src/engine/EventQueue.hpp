@@ -19,7 +19,7 @@ struct Event {
 class EventQueue {
 public:
     void push(const std::shared_ptr<Event> &event);
-
+    bool empty() const;
     std::shared_ptr<Event> pop();
 
 private:

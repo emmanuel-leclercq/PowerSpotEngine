@@ -17,3 +17,7 @@ std::shared_ptr<Event> EventQueue::pop() {
     queue_.pop();
     return event;
 }
+
+bool EventQueue::empty() const {
+    return queue_.empty(); // Leverage the STL queue's empty method
+}

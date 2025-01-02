@@ -5,7 +5,8 @@ set(LIB_NAME power_market_engine)
 file(GLOB_RECURSE SOURCES engine/*.cpp utils/*.cpp)
 
 # Add library target
-add_library(${LIB_NAME} ${SOURCES})
+add_library(${LIB_NAME} ${SOURCES}
+        ../include/engine/)
 
 # Include directories
 target_include_directories(${LIB_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
